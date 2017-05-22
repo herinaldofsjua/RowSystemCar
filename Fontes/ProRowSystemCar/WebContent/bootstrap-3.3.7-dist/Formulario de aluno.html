@@ -1,0 +1,157 @@
+<html>
+        <head>
+        	    <link href="css/bootstrap.min.css" rel="stylesheet">
+                <meta charset="utf-8">
+                <link hrel="js/bootstrap.mim.js" rel="stylesheet">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                <style>
+                      
+                     .logon_center{
+                         margin: auto;
+                         width: 10%;
+                          
+                     }
+
+                    .center{
+                         margin: auto;
+                         width: 79%;
+                          
+                     }
+                     body{
+                     background-color: lightblue;
+                     }
+                </style>
+                <title>
+
+                Formulário de Alunos
+               </title>
+
+
+        </read>
+
+        <body>
+        
+        	<div class="container" >
+        	   <div class="logon_center">
+        	   <img src="fotos/logofap.jpg" class="img-thumbnail" alt="Cinque Terre" width="104" height="136">
+        	   </div><br><br>
+        	   <div class="center">
+	           <div class="input-group" >
+
+	                 <h1>Formulario de Alunos Bootstrep</h1>
+
+           		    <form name="Alunos" method="post" action="Arquivo.txt">
+
+	           		<div class="jumbotron">
+		          
+		              <label>Nome:</label><br>
+
+		              <input type="text" name="f_nome size="100" maxlength="20"  class="form-control" placeholder="Digite seu nome"/><br><br>
+	              
+	              	
+	             
+	                  <label align="center">Sobre Nome:</label><br>
+ 
+	                  <input type="text" name="f_nome size="100" maxlength="40"  class="form-control" placeholder="Digite seu sobre-nome"/><br><br>
+                   
+	                                     <div class="well"> 
+	                                      <label>CPF:</label>
+	                                      <input type="numeric" name="f_mcpf size="11"  maxlength="11" class="well" />
+	                                      <label>Matricula:</label>
+	                                      <input type="numeric" name="f_mcpf size="15" maxlength="9" class="well"/><br>
+	                                      </div>
+
+	                                      <div class="well">
+	                                      <label>Usuário:</label>
+	                                      <input type="text" name="f_usuario size="20"  maxlength="20" class="validate" />
+	                                      <label>Senha:</label>
+	                                      <input type="password" name="f_senha size="20"  maxlength="20" class="validate" /><br>
+	                                      </div>
+
+	                                      <div class="well"> 
+	                                      <label>E-mail:</label>
+	                                      <input type="text" name="f_email size="40"  maxlength="40" class="well" />
+	                                      <label>telefone:</label>
+	                                      <input type="numeric" name="f_telefone size="14" maxlength="14" class="well"/><br>
+	                                      </div>
+	                                      <label>Endereço</label><br>
+	                                      <div class="well"> 
+	                                      <label>Cidade:</label>
+	                                      <input type="text" name="f_email size="40"  maxlength="40" class="well" />
+	                                      <label>Rua:</label>
+	                                      <input type="text" name="f_telefone size="14" maxlength="14" class="well"/><br>
+	                                      <label>Nº:</label>
+	                                      <input type="text" name="f_email size="40"  maxlength="40" class="well" />
+	                                      <label>Bairro:</label>
+	                                      <input type="text" name="f_telefone size="14" maxlength="14" class="well"/><br>
+	                                      </div>
+
+	                                       
+
+	                             <label>Necessidades especiais?</label><br>
+
+	                             <input type="radio" name="F_necessidades" value="s" /><label>Sim</label><br><br>
+ 
+	                             <input type="radio" name="F_necessidades" value="n" /><label>Não</label><br><b>
+	               
+	                           <label>Estado</label><br><br>
+	                           <select name="F_Estado">
+	               	             <option value="CE">
+	               	                    CEARÁ
+	               	             </option>
+
+	               	             <option value="PE">
+	               	                 	PERNAMBUCO
+	               	             </option>
+
+	               	             <option value="PB">
+	               	                  	PARAÍBA
+	               	             </option>
+
+	               	             <option value="RN">
+	               	      	           RIO GRANDE DO NORTE
+	               	             </option> 
+
+	                           </select><br><br>
+                    
+                  
+                   
+	               <label>Anotações</label><br>
+
+	               <textarea name="texto" cols="100" rows="5"  >
+	               	
+	               </textarea> <br><br>
+
+                   <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>  
+	               
+	               
+
+	               
+	             <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Sobre</button> <br><br>
+
+	           
+                             <div id="demo" class="collapse">
+                              No quadro a cima, fale um pouco sobre você, se você tiver alguma necessidade especial dê detalhes para que possamos atendelo melhor.  
+                             </div>
+                 
+                      
+	                          <input type="submit" value="Enviar Formulário" class="btn btn-primary active""/>
+	                          <input type="reset" value="Limpar"  class="btn btn-primary active" /><br><br>
+     
+	         
+	             </form>
+                   
+                  </div>
+
+	         </div>
+	      </div>
+        </div>
+
+
+        </body>
+
+
+
+</html>
+ 
