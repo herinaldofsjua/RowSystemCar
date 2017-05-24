@@ -1,4 +1,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+ <%@page import="java.util.List"%>
+<%@page import="br.com.apis.rowsystemcar.entidades.*" %>
+<%@page import="br.com.apis.rowsystemcar.controller.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@page import="br.com.apis.rowsystemcar.entidades.*" %>
 <html>
@@ -35,22 +38,22 @@ background-color: lightblue;
    <c:forEach items="${requestScope.lista }" var="cli">
  
        <tr bgcolor="white">
-           <td>${ cli.Id}</td>
-           <td>${ cli.Nome }</td>
-           <td>${  cli.Login }</td>
-           <td>${  cli.Senha }</td>
-           <td>${  cli.Telefone1}</td>
-           <td>${  cli.Telefone2 }</td>
-           <td>${  cli.Cidade }</td>
-           <td>${  cli.Bairro }</td>
-           <td>${  cli.Rua }</td>
-           <td>${  cli.Numero }</td>
-           <td>${  cli.Uf }</td>
+           <td>${ cli.id}</td>
+           <td>${ cli.nome }</td>
+           <td>${  cli.login }</td>
+           <td>${  cli.senha }</td>
+           <td>${  cli.telefone1}</td>
+           <td>${  cli.telefone2 }</td>
+           <td>${  cli.cidade }</td>
+           <td>${  cli.bairro }</td>
+           <td>${  cli.rua }</td>
+           <td>${  cli.numero }</td>
+           <td>${  cli.uf }</td>
            <td> 
            
-           <a href="clicontroller.do?acao=exc&id=${ cli.Id}"> Excluir </a>
+           <a href="clicontroller.do?acao=exc&id=${ cli.id}"> Excluir </a>
            |
-           <a href="clicontroller.do?acao=alt&id=${ cli.Id}"> Alterar </a> 
+           <a href="clicontroller.do?acao=alt&id=${ cli.id}"> Alterar </a> 
            
            </td>
        </tr>

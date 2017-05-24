@@ -48,7 +48,7 @@ public class ClienteController extends HttpServlet {
 			//seta atributos request com pbjeto cliente 
 			request.setAttribute("cliente",cliente);
 			//emcaminha objeto cliente para a tela
-			RequestDispatcher saida = request.getRequestDispatcher("FormCliente.jsp");
+			RequestDispatcher saida = request.getRequestDispatcher("FCCliente.jsp");
 		    saida.forward(request, response);
 			
 		}
@@ -58,7 +58,7 @@ public class ClienteController extends HttpServlet {
 	    //engaveta no request a lista
 	    request.setAttribute("lista", lista);
 	    //encaminha ao JSP
-	    RequestDispatcher saida = request.getRequestDispatcher("listaclientes.jsp");
+	    RequestDispatcher saida = request.getRequestDispatcher("ListaClientes.jsp");
 	    saida.forward(request, response);
 	    
 		}
@@ -78,7 +78,7 @@ public class ClienteController extends HttpServlet {
 			cliente.setUf("");
 			request.setAttribute("cliente",cliente);
 			
-			RequestDispatcher saida = request.getRequestDispatcher("FormCliente.jsp");
+			RequestDispatcher saida = request.getRequestDispatcher("FCCliente.jsp");
 		    saida.forward(request, response);
 			
 		}
