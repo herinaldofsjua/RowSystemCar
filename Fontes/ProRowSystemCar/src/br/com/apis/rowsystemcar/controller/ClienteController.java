@@ -48,7 +48,7 @@ public class ClienteController extends HttpServlet {
 			//seta atributos request com pbjeto cliente 
 			request.setAttribute("cliente",cliente);
 			//emcaminha objeto cliente para a tela
-			RequestDispatcher saida = request.getRequestDispatcher("FCCliente.jsp");
+			RequestDispatcher saida = request.getRequestDispatcher("EdCliente.jsp");
 		    saida.forward(request, response);
 			
 		}
@@ -58,10 +58,16 @@ public class ClienteController extends HttpServlet {
 	    //engaveta no request a lista
 	    request.setAttribute("lista", lista);
 	    //encaminha ao JSP
-	    RequestDispatcher saida = request.getRequestDispatcher("ListaClientes.jsp");
+	    RequestDispatcher saida = request.getRequestDispatcher("VisClientes.jsp");
 	    saida.forward(request, response);
 	    
 		}
+		if(acao != null && acao.equals("men")){
+			
+			RequestDispatcher saida = request.getRequestDispatcher("MenuCliente.jsp");
+		    saida.forward(request, response);
+		    
+	    }
 		if(acao != null && acao.equals("cad")){//chama tela alterar
 			
 			Cliente cliente = new Cliente();
@@ -76,9 +82,10 @@ public class ClienteController extends HttpServlet {
 			cliente.setRua("");
 			cliente.setNumero("");
 			cliente.setUf("");
+			cliente.setConta("");
 			request.setAttribute("cliente",cliente);
 			
-			RequestDispatcher saida = request.getRequestDispatcher("FCCliente.jsp");
+			RequestDispatcher saida = request.getRequestDispatcher("CCliente.jsp");
 		    saida.forward(request, response);
 			
 		}
@@ -103,6 +110,7 @@ public class ClienteController extends HttpServlet {
 		String rua= request.getParameter("txtrua");
 		String numero= request.getParameter("txtnumero");
 		String uf= request.getParameter("txtuf");
+		String conta= request.getParameter("txtconta");
 		
 	    Cliente cliente = new Cliente();
 	    
@@ -118,6 +126,7 @@ public class ClienteController extends HttpServlet {
 	    cliente.setRua(rua);
 	    cliente.setNumero(numero);
 	    cliente.setUf(uf);
+	    cliente.setConta(conta);
 	    
 		ClienteDAO   clienteDAO= new ClienteDAO();
         clienteDAO.salvar(cliente);

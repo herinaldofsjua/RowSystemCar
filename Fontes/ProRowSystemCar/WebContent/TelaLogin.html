@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -23,18 +23,20 @@ background-color: lightblue;
      
         <h1>AUTENTIFICAÇÃO</h1>  
         
-     <form action="monicontroller.do" method="post"> 
+     <form action="autcontroller.do" method="post"> 
     
          <label>*Login:</label>
          <input type="text" name="txtlogin" maxlength="20" size="21"/>
          
          <label>*Senha:</label>
          <input type="password" name="txtsenha" maxlength="8" size="10"/>
+         <input type="submit" value="Entrar" />
+         <a href="clicontroller.do?acao=cad">OU CADASTRE-SE</a>
+          
          
-         <input type="submit" value="Entrar" /> 
-         <input type="submit" value="ou Cadastrar">
          
      </form>
+     
 
 </body>
 </html>

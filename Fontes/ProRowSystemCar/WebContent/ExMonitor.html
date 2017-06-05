@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@page import="br.com.apis.rowsystemcar.entidades.*" %>
+<%@page import="br.com.apis.rowsystemcar.controller.*" %>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>EXCLUIR MONITOR</title>
+<style type="text/css">
+h1{
+
+text-align: center; color: blue;
+
+}
+body{
+
+background-color: lightblue;
+
+}
+</style>
+</head>
+        <%
+     Monitor monitor = (Monitor)  request.getAttribute("monitor"); 
+     %>
+<body>
+
+       <img  id="image-1" alt="" src="fotos/LogoRowSystemCar.gif" width="300"/>
+       <h1>EXCLUIR MONITOR</h1>
+       <form action="monicontroller.do?acao=exc" method="post">
+       
+         <label>ENTRE COM O ID</label>
+         <input type="text"  name="txtid"  maxlength="4" value="<%= monitor.getId() %>" size="4" /><br><br>
+         
+        
+        
+         <input type="submit" value="Salvar"/>
+         <a href="MenuMonitor.jsp">Cacelar</a> 
+         
+       </form>
+
+</body>
+</html>

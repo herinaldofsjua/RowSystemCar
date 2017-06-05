@@ -15,8 +15,15 @@ public class Cliente {
            private String rua;
            private String numero;
            private String uf;
+           private String conta;  
            
 		
+		public String getConta() {
+			return conta;
+		}
+		public void setConta(String conta) {
+			this.conta = conta;
+		}
 		public Integer getId() {
 			return id;
 		}

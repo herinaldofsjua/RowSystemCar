@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.swing.JOptionPane;
 
 import br.com.apis.rowsystemcar.entidades.Cliente;
@@ -17,7 +18,7 @@ public class ClienteDAO extends Cliente {
 
 	public void cadastrar(Cliente cliente) {
 
-		String consultasql = "INSERT INTO cliente (nome,login,senha,telefone1,telefone2,cidade,bairro,rua,numero,uf)  VALUES(?,?,?,?,?,?,?,?,?,?)";
+		String consultasql = "INSERT INTO cliente (nome,login,senha,telefone1,telefone2,cidade,bairro,rua,numero,uf,conta)  VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 		try {
 			PreparedStatement preparador = conexao.prepareStatement(consultasql);
 			preparador.setString(1, cliente.getNome());
@@ -30,6 +31,7 @@ public class ClienteDAO extends Cliente {
 			preparador.setString(8, cliente.getRua());
 			preparador.setString(9, cliente.getNumero());
 			preparador.setString(10,cliente.getUf());
+			preparador.setString(11,cliente.getConta());
 			preparador.execute();
 			preparador.close();
 			JOptionPane.showMessageDialog(null, "Cadastrado com Sucesso!");
@@ -76,7 +78,7 @@ public class ClienteDAO extends Cliente {
 			preparador.close();
 			JOptionPane.showMessageDialog(null, "Excluido com sucesso!");
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null, "id não existe!" + e.getMessage());
+			JOptionPane.showMessageDialog(null, "id nï¿½o existe!" + e.getMessage());
 		}
 	}
 
@@ -101,6 +103,7 @@ public class ClienteDAO extends Cliente {
 				cliente.setRua(resultado.getString("rua"));
 				cliente.setNumero(resultado.getString("numero"));
 				cliente.setUf(resultado.getString("uf"));
+				cliente.setConta(resultado.getString("conta"));
 				lista.add(cliente);
 
 			}
@@ -134,10 +137,11 @@ public class ClienteDAO extends Cliente {
 				cliente.setRua(resultado.getString("rua"));
 				cliente.setNumero(resultado.getString("numero"));
 				cliente.setUf(resultado.getString("uf"));
+				cliente.setConta(resultado.getString("conta"));
 			}
 
 		} catch (SQLException e) {
-			System.out.println("ID não encontrado!");
+			System.out.println("ID nï¿½o encontrado!");
 		}
 		return cliente;
 
@@ -164,10 +168,11 @@ public class ClienteDAO extends Cliente {
 				cliente.setRua(resultado.getString("rua"));
 				cliente.setNumero(resultado.getString("numero"));
 				cliente.setUf(resultado.getString("uf"));
+				cliente.setConta(resultado.getString("conta"));
 				lista.add(cliente);			}
 
 		} catch (SQLException e) {
-			System.out.println("ID não encontrado!");
+			System.out.println("ID nï¿½o encontrado!");
 		}
 		return lista;
 
@@ -191,7 +196,7 @@ public class ClienteDAO extends Cliente {
 			}
 
 		} catch (SQLException e) {
-			System.out.println("falha na autenficação!");
+			System.out.println("falha na autenficaï¿½ï¿½o!");
 		}
 		return clienteRetorno;
 

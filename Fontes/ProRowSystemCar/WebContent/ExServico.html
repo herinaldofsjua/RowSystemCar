@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>EXCLUIR SERVIÇO</title>
+
+    <style type="text/css">
+h1{
+
+text-align: center; color: blue;
+
+}
+body{
+
+background-color: lightblue;
+
+}
+
+
+
+</style>
+
+</head>
+         <%
+      Servico servico = (servico)  request.getAttribute("servico"); 
+     %>
+<body>
+     <img  id="image-1" alt="" src="fotos/LogoRowSystemCar.gif" width="300"/>
+     <h1>EXCLUIR SERVIÇO</h1>
+    <form action="sercontroller.do?acao=exc" method="post">
+       
+         <label>ENTRE COM O ID</label>
+         <input type="text"  name="txtid"  maxlength="4" value="<%= servico.getId() %>" size="4" /><br><br>
+         
+        
+        
+         <input type="submit" value="Salvar"/>
+         <a href="MenuMonitor.jsp">Cacelar</a> 
+         
+     </form>
+      
+</body>
+</html>
